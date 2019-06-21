@@ -92,10 +92,10 @@
         word-spacing: 10px;
         text-shadow: 0 10px 2px #76cdd7, 0 3px 0 #76cdd7;
 
-        animation-name: shake;
-        animation-duration: 3s;
+        animation-name: rotate;
         animation-iteration-count: 1;
         animation-timing-function: linear;
+        animation-duration: 3s;
     }
 
     #home, .tm-sidebar, section {
@@ -232,7 +232,7 @@
     }
 }
 
-@keyframes shake {
+@keyframes rotate {
     0% {
         transform: rotateY(0deg);
     }
