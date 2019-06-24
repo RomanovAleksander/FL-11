@@ -1,0 +1,293 @@
+$fonts: (
+  "source": 'Source Sans Pro',
+  "hind": 'Hind',
+  "fresca": 'Fresca'
+);
+
+@mixin underline($width: 0, $height: 0, $left: 0, $bottom: 0) {
+  display: block;
+  position: absolute;
+  background-color: $underline-background;
+  width: $width;
+  height: $height;
+  left: $left;
+  bottom: $bottom;
+  z-index: -1;
+}
+
+@mixin button {
+  height: 48px;
+  width: 143px;
+  border: none;
+  border-radius: 3px;
+  color: $button-color;
+  background-color: $button-background;
+  font-size: 17px;
+  font-weight: 600;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+body {
+  max-width: 1920px;
+  padding: 0;
+  margin: 0 auto;
+  color: $body-color;
+  background-color: $body-background;
+}
+
+.header {
+  max-width: 100%;
+  height: 720px;
+  margin: 0 auto;
+  color: $header-color;
+  background-size: 100% 110%;
+  background-image: $background-img;
+  background-color: $button-background;
+  background-repeat: no-repeat;
+  border-bottom-right-radius: 39%;
+  &-wrap {
+    width: 81%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+    z-index: 0;
+    .landing-logo {
+      display: flex;
+      height: 16.6%;
+      img {
+        height: 44px;
+        position: relative;
+      }
+      p {
+        position: relative;
+        top: 4px;
+        left: 2px;
+        width: 97px;
+        margin: 0;
+        text-align: center;
+        font-family: map-get($fonts, "source");
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 18px;
+        span {
+          display: inline-block;
+          font-size: 11px;
+          font-weight: normal;
+          letter-spacing: 0;
+          word-spacing: -1px;
+        }
+      }
+    }
+  }
+  &_heading {
+    position: relative;
+    max-width: 500px;
+    margin: 0;
+    font-family: map-get($fonts, "source");
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 71px;
+    letter-spacing: 1.2px;
+    z-index: 0;
+    &::after {
+      content: '';
+      @include underline($width: 60%, $height: 25px);
+    }
+  }
+  &_text {
+    max-width: 667px;
+    padding-top: 20px;
+    font-size: 16px;
+    font-family: map-get($fonts, "hind");
+    line-height: 24px;
+    white-space: pre-line;
+    letter-spacing: 0.21px;
+    word-spacing: 0;
+  }
+  &_button {
+    @include button();
+    margin-top: 45px;
+    &:hover{
+      background: $banner-gradient;
+      color: #2e5cd4;
+      animation: slidebg 2.5s linear infinite;
+      transition: color 1.5s;
+    }
+  }
+}
+
+.section {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  &_text {
+    position: relative;
+    font-family: map-get($fonts, "source");
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 38px;
+    margin-bottom: 37px;
+    letter-spacing: 1px;
+    &::after {
+      content: '';
+      @include underline($width: 189px, $height: 12px, $left: 50.5%, $bottom: 9px);
+    }
+  }
+  &_card_wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 81%;
+    margin: 0 auto;
+    .section_card {
+      max-width: 377px;
+      height: 436px;
+      text-align: center;
+      background-color: $card-background;
+      border-radius: 7px;
+      padding: 19px 10px 0 11px;
+      margin-bottom: 10px;
+      transition: all 0.3s;
+      &:hover {
+        box-shadow: -9px 10px 18px -5px #2f3133;
+        transform: scale(1.02);
+        transition: all 0.3s;
+      }
+      &_img {
+        max-width: 369px;
+        height: 238px;
+        border-radius: 7px;
+      }
+      &_heading {
+        position: relative;
+        display: inline-block;
+        color: $card-header-color;
+        font-family: map-get($fonts, "source");
+        font-size: 25px;
+        margin: 8px 0 0 0;
+        z-index: 0;
+        span {
+          content: '';
+          @include underline($width: 100%, $height: 12px);
+        }
+      }
+      &_text {
+        display: flex;
+        align-items: center;
+        height: 27%;
+        color: $card-color;
+        font-family: map-get($fonts, "source");
+        font-size: 17px;
+        word-spacing: 0.4px;
+        line-height: 1.4;
+        padding-left: 3px;
+      }
+    }
+  }
+  &_banner {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 63%;
+    min-height: 144px;
+    left: 18.5%;
+    bottom: -277px;
+    background: $banner-gradient;
+    border-radius: 4px;
+    &_text_wrap {
+      width: 43.5%;
+    }
+    &_heading {
+      position: relative;
+      margin: -5px 0 0 0;
+      font-family: map-get($fonts, "source");
+      font-size: 30px;
+      font-weight: bold;
+      word-spacing: 1px;
+      color: $banner-header-color;
+      z-index: 0;
+      &::before {
+        content: '';
+        @include underline($width: 66px, $height: 14px, $left: 122px, $bottom: 4px);
+      }
+    }
+    &_text {
+      color: $banner-color;
+      font-family: map-get($fonts, "source");
+      font-size: 16px;
+      margin: 16px 0 14px 0;
+    }
+    &_button {
+      @include button();
+      &:hover{
+        background: $banner-gradient;
+        color: #2e5cd4;
+        animation: slidebg 2.5s linear infinite;
+        transition: color 1.5s;
+      }
+    }
+  }
+}
+
+.footer {
+  @extend .section;
+  min-height: 243px;
+  background: $footer-background;
+  color: $footer-color;
+  margin-top: 202px;
+  z-index: -1;
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 81%;
+    height: 185px;
+    margin: 0 auto;
+  }
+  &_logo {
+    display: flex;
+    img {
+      position: relative;
+      top: -6px;
+    }
+    p {
+      width: 97px;
+      margin: 0;
+      text-align: center;
+      font-size: 26px;
+      font-weight: bold;
+      font-family: map-get($fonts, "source");
+      line-height: 18px;
+      span {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: normal;
+        letter-spacing: 0;
+        word-spacing: -1px;
+      }
+    }
+  }
+  &_text {
+    position: relative;
+    top: 17px;
+    left: -13px;
+    max-width: 315px;
+    font-family: map-get($fonts, "source");
+  }
+  .footer-cr {
+    position: relative;
+    top: -17px;
+    font-family: map-get($fonts, "source");
+    word-spacing: 1px;
+    letter-spacing: 0.5px;
+  }
+}
+
+@keyframes slidebg {
+  to {
+    background-position: 20vw;
+  }
+}
