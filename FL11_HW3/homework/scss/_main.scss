@@ -26,6 +26,12 @@ $fonts: (
   font-weight: 600;
   transition: all 0.5s;
   cursor: pointer;
+  &:hover{
+    background: $banner-gradient;
+    color: $button-hover-color;
+    animation: slidebg 2.5s linear infinite;
+    transition: color 1.5s;
+  }
 }
 
 body {
@@ -106,14 +112,8 @@ body {
     word-spacing: 0;
   }
   &_button {
-    @include button();
     margin-top: 45px;
-    &:hover{
-      background: $banner-gradient;
-      color: #2e5cd4;
-      animation: slidebg 2.5s linear infinite;
-      transition: color 1.5s;
-    }
+    @include button();
   }
 }
 
@@ -222,12 +222,6 @@ body {
     }
     &_button {
       @include button();
-      &:hover{
-        background: $banner-gradient;
-        color: #2e5cd4;
-        animation: slidebg 2.5s linear infinite;
-        transition: color 1.5s;
-      }
     }
   }
 }

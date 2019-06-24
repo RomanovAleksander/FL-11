@@ -74,6 +74,7 @@ body {
     letter-spacing: 0.21px;
     word-spacing: 0; }
   .header_button {
+    margin-top: 45px;
     height: 48px;
     width: 143px;
     border: none;
@@ -83,11 +84,10 @@ body {
     font-size: 17px;
     font-weight: 600;
     transition: all 0.5s;
-    cursor: pointer;
-    margin-top: 45px; }
+    cursor: pointer; }
     .header_button:hover {
       background: linear-gradient(to right, #E3AC00, #963150);
-      color: #2e5cd4;
+      color: #963150;
       animation: slidebg 2.5s linear infinite;
       transition: color 1.5s; }
 
@@ -215,7 +215,7 @@ body {
       cursor: pointer; }
       .section_banner_button:hover {
         background: linear-gradient(to right, #E3AC00, #963150);
-        color: #2e5cd4;
+        color: #963150;
         animation: slidebg 2.5s linear infinite;
         transition: color 1.5s; }
 
