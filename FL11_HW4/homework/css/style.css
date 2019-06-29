@@ -1,0 +1,419 @@
+html {
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body, h1, h2, p {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0 auto;
+    font-family: "Open Sans";
+}
+
+.header {
+    width: 100%;
+    height: 65.7vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 1500px;
+    background: url(../img/sample2.jpg) no-repeat;
+    background-color: black;
+    background-size: 110% 99%;
+    color: white;
+}
+
+.header-info {
+    width: 98%;
+    height: 13%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-info .logo {
+    font-size: 1.3vw;
+    letter-spacing: 0.18em;
+}
+
+.header-links {
+    height: 100%;
+    width: 13.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+.header-links a {
+    width: 36%;
+    color: white;
+    font-size: 1.3vw;
+}
+
+.header-links a:hover {
+    color: #F7914F;
+}
+
+.header-title {
+    text-align: center;
+}
+
+.title-logo {
+    font-size: 4.4vw;
+    letter-spacing: 0.9vw;
+}
+
+.title-logo span {
+    font-size: 8vw;
+    padding: 0 1.3vw;
+}
+
+.title-text {
+    font-size: 1.23vw;
+}
+
+.header-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    height: 23%;
+}
+
+.header-navigation button {
+    padding: 0 8%;
+    height: 33%;
+    border: 0.14vw solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+main {
+    background-color: #F3F3F3;
+}
+
+.description {
+    position: relative;
+    width: 100%;
+    height: 18.5vw;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to left bottom, #000000 50%, transparent 50%);
+    z-index: 1;
+}
+
+.description p:nth-child(1) {
+    width: 35%;
+    height: 69%;
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.58vw;
+    letter-spacing: 0.035vw;
+    padding-left: 1vw;
+}
+
+.description p:nth-child(2) {
+    width: 48.7%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    color: white;
+    font-size: 1.25vw;
+    margin-top: -0.58vw;
+}
+
+.description p span {
+    display: contents;
+    font-weight: bold;
+}
+
+.articles {
+    width: 100%;
+    height: 65vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.articles  h2 {
+    height: 9.5%;
+    font-weight: normal;
+    font-size: 2.17vw;
+    margin: 0 auto;
+    margin-top: -1.3vw;
+}
+
+.article {
+    width: 97.5%;
+    height: 41%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5%;
+}
+
+.article-img-container {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    color: white;
+}
+
+.article-first-img {
+    background: url(../img/sample-1.jpg) no-repeat;
+    background-size: cover;
+}
+
+.article-second-img {
+    background: url(../img/sample-2.jpg) no-repeat;
+    background-size: cover;
+}
+
+.article-img-likes {
+    position: absolute;
+    width: 10%;
+    height: 8%;
+    top: 7%;
+    right: 4%;
+    display: block;
+    border: 1.5px solid white;
+    background-color: transparent;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.3vw;
+    padding-top: 1%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.article-img-description {
+    position: absolute;
+    display: block;
+    bottom: 6.5%;
+    left: 3.5%;
+    font-size: 1.2vw;
+}
+
+.article-text {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.article-text p {
+    width: 96%;
+    height: 19%;
+    text-align: center;
+    font-size: 1.27vw;
+    padding: 5% 0;
+}
+
+.news-section {
+    width: 100%;
+    height: 42vw;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.news-container {
+    height: 71%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.news {
+    position: relative;
+    width: 20%;
+    height: 89%;
+}
+
+.news-likes {
+    position: absolute;
+    display: block;
+    top: 7%;
+    right: 9%;
+    width: 23%;
+    height: 8%;
+    color: white;
+    border: 0.14vw solid white;
+    background-color: transparent;
+    text-align: center;
+    font-size: 1.35vw;
+    padding-top: 2%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.news-explore-btn {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 88%;
+    height: 11%;
+    color: white;
+    background-color: #097774;
+    border: none;
+    font-weight: bold;
+    font-size: 1.3vw;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.news p {
+    position: absolute;
+    left: 8%;
+    bottom: 6%;
+    color: white;
+    font-size: 1.2vw;
+}
+
+.bg-1{
+    background: url(../img/news-list-1.jpg) no-repeat;
+    background-size: cover;
+}
+
+.bg-2{
+    background: url(../img/news-list-2.jpg) no-repeat;
+    background-size: cover;
+}
+
+.bg-3{
+    background: url(../img/news-list-3.jpg) no-repeat;
+    background-size: cover;
+}
+
+.bg-4{
+    background: url(../img/news-list-4.jpg) no-repeat;
+    background-size: cover;
+}
+
+.news-load-btn {
+    width: 27%;
+    height: 11%;
+    color: white;
+    background-color: #097774;;
+    border: none;
+    font-size: 1.33vw;
+    margin: 0 auto;
+    margin-top: 4.5%;
+    cursor: pointer;
+}
+
+.news-subscribe {
+    width: 100%;
+    height: 18vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F3F3F3;
+}
+
+.subscribe-about {
+    width: 97%;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 1.2vw;
+}
+
+form {
+    display: flex;
+    width: 97%;
+    height: 33%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+form label{
+    width: 29.7%;
+    height: 60%;
+    font-size: 2.15vw;
+}
+
+form input{
+    width: 13%;
+    height: 43%;
+    margin-left: 2%;
+    font-size: 1.2vw;
+    border: 1px solid black;
+    background-color: transparent;
+    text-indent: 1rem;
+}
+
+form input::placeholder {
+    color: black;
+}
+
+form button{
+    width: 8%;
+    height: 51%;
+    color: white;
+    background-color: #097774;
+    border: none;
+    font-size: 1.5vw;
+    margin-left: 1%;
+    cursor: pointer;
+}
+
+
+footer {
+    width: 97%;
+    height: 4vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    margin: 0 auto;
+}
+footer p {
+    color: gray;
+    font-size: 1.5vw;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5vw;
+    transition: all 0.3s;
+}
+
+footer a:hover {
+    color: #097774;
+}
+
+footer a:not(:last-child) {
+    margin-right: 3vw;
+}
+
+.likes {
+    transition: all 0.3s;
+}
+
+.likes:hover {
+    color: #F7914F;
+    border-color: #F7914F;
+}
+
+button {
+    transition: all 0.5s;
+}
+
+button:hover {
+    background-color: #F3F3F3;
+    color: black;
+}
