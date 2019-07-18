@@ -47,7 +47,7 @@ class Fighter {
     }
 
     dealDamage(damage) {
-        this.health = this.health - damage;
+        this.health = this.health - damage < 0 ? 0 : this.health - damage;
     }
 
     addWin() {
@@ -61,7 +61,7 @@ class Fighter {
 
 function battle(firstFighter, secondFighter) {
     if (firstFighter.health === 0 || secondFighter.health === 0){
-        console.log(`${firstFighter.health === 0 ? firstFighter.name : secondFighter.name} is dead and can't fight!`);
+        console.log(`${secondFighter.health === 0 ? secondFighter.name : firstFighter.name} is dead and can't fight!`);
         return
     }
 
@@ -80,7 +80,7 @@ function battle(firstFighter, secondFighter) {
     secondFighter.logCombatHistory();
 }
 
-const fighter1 = new Fighter({name: 'John', damage: 30, agility: 25, hp: 100});
-const fighter2 = new Fighter({name: 'Jim', damage: 20, agility: 60, hp: 90});
+const fighter1 = new Fighter({name: 'Shao Kahn', damage: 40, agility: 20, hp: 150});
+const fighter2 = new Fighter({name: 'Raiden', damage: 20, agility: 70, hp: 100});
 
 battle(fighter1, fighter2);
