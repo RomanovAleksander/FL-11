@@ -11,3 +11,4 @@
 - [x] 7. Control flow - [Demo1](https://romanovaleksander.github.io/FL-11/FL11_HW7/homework/src/task1.html) | [Demo2](https://romanovaleksander.github.io/FL-11/FL11_HW7/homework/src/task2.html) | [Codebase](https://github.com/RomanovAleksander/FL-11/blob/master/FL11_HW7/homework/src/)
 - [x] 8. Functions - [Codebase](https://github.com/RomanovAleksander/FL-11/blob/master/FL11_HW8/homework/js/)
 - [x] 9. Data types - [Codebase](https://github.com/RomanovAleksander/FL-11/blob/master/FL11_HW9/homework/index.js)
+- [x] 9. Scope & Context - [Demo](https://romanovaleksander.github.io/FL-11/FL11_HW10/homework/) | [Codebase](https://github.com/RomanovAleksander/FL-11/blob/master/FL11_HW10/homework/js/fighters_game.js)
