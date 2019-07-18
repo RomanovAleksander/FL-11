@@ -80,7 +80,7 @@ function battle(firstFighter, secondFighter) {
     secondFighter.logCombatHistory();
 }
 
-const fighter1 = new Fighter({name: 'Shao Kahn', damage: 40, agility: 30, hp: 150});
-const fighter2 = new Fighter({name: 'Liu Kang', damage: 20, agility: 70, hp: 100});
+const fighter1 = new Fighter({name: 'Shao Kahn', damage: 40, agility: 20, hp: 150});
+const fighter2 = new Fighter({name: 'Raiden', damage: 20, agility: 70, hp: 100});
 
 battle(fighter1, fighter2);
