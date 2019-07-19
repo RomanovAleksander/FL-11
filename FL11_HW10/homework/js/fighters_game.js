@@ -4,6 +4,7 @@ class Fighter {
         this.damage = damage;
         this.agility = agility;
         this.health = hp;
+        this.maxHealth = hp;
         this.wins = 0;
         this.losses = 0;
     }
@@ -42,7 +43,7 @@ class Fighter {
     }
 
     heal(health) {
-        this.health = this.health + health;
+        this.health = this.health + health > this.maxHealth ? this.maxHealth : this.health + health;
         console.log(`${this.name} was healed! He has ${this.health} hp`);
     }
 
