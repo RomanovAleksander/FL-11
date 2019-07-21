@@ -1,76 +1,69 @@
 class Fighter {
-    #name;
-    #damage;
-    #agility;
-    #health;
-    #maxHealth;
-    #wins;
-    #losses;
-
     constructor({name, damage, agility, hp}) {
-        this.#name = name;
-        this.#damage = damage;
-        this.#agility = agility;
-        this.#health = hp;
-        this.#maxHealth = hp;
-        this.#wins = 0;
-        this.#losses = 0;
+        this._name = name;
+        this._damage = damage;
+        this._agility = agility;
+        this._health = hp;
+        this._maxHealth = hp;
+        this._wins = 0;
+        this._losses = 0;
     }
 
     getName() {
-        return this.#name;
+        return this._name;
     }
 
     getDamage() {
-        return this.#damage;
+        return this._damage;
     }
 
     getAgility() {
-        return this.#agility;
+        return this._agility;
     }
 
     getHealth() {
-        return this.#health;
+        return this._health;
     }
 
     attack(fighter) {
         const max = 100;
-        const successRange = max - fighter.#agility;
+        const successRange = max - fighter._agility;
         const impactForce = Math.floor(Math.random() * max);
 
         if (impactForce > successRange) {
-            console.log(`${this.#name} attack missed`);
+            console.log(`${this._name} attack missed`);
         } else {
-            fighter.dealDamage(this.#damage);
-            console.log(`${this.#name} make ${this.#damage} damage to ${fighter.#name}`);
+            fighter.dealDamage(this._damage);
+            console.log(`${this._name} make ${this._damage} damage to ${fighter._name}`);
         }
     }
 
     logCombatHistory() {
-        console.log(`Name: ${this.#name}, Wins: ${this.#wins}, Losses: ${this.#losses}`);
+        console.log(`Name: ${this._name}, Wins: ${this._wins}, Losses: ${this._losses}`);
     }
 
     heal(health) {
-        this.#health = this.#health + health > this.#maxHealth ? this.#maxHealth : this.#health + health;
-        console.log(`${this.#name} was healed! He has ${this.#health} hp`);
+        this._health = this._health + health > this._maxHealth ? this._maxHealth : this._health + health;
+        console.log(`${this._name} was healed! He has ${this._health} hp`);
     }
 
     dealDamage(damage) {
-        this.#health = this.#health - damage < 0 ? 0 : this.#health - damage;
+        this._health = this._health - damage < 0 ? 0 : this._health - damage;
     }
 
     addWin() {
-        this.#wins++;
+        this._wins++;
     }
 
     addLoss() {
-        this.#losses++;
+        this._losses++;
     }
 }
 
 function battle(firstFighter, secondFighter) {
     if (firstFighter.getHealth() === 0 || secondFighter.getHealth() === 0) {
-        console.log(`${secondFighter.getHealth() === 0 ? secondFighter.getName() : firstFighter.getName()} is dead and can't fight!`);
+        console.log(`${secondFighter.getHealth() === 0 ? secondFighter.getName() :
+            firstFighter.getName()} is dead and can't fight!`);
         return
     }
 
